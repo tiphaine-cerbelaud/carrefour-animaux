@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alimentation — Carrefour Animaux</title>
+  <meta name="description" content="Croquettes, pâtées et alimentation des nouveaux animaux de compagnie : produits Carrefour, livraison par abonnement et calculateur de ration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Icônes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-food" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18a9 9 0 0 1-18 0Z"/><path d="M8 8c0-2 2-2 2-4M13 8c0-2 2-2 2-4"/></symbol>
+    <symbol id="i-health" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-8-5-8-11a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 6-8 11-8 11Z"/><path d="M12 10v5M9.5 12.5h5"/></symbol>
+    <symbol id="i-care" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="7" r="3"/><circle cx="6" cy="17" r="3"/><path d="M8.5 8.5 20 18M8.5 15.5 20 6"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7v9H3Z"/><path d="M9 20v-6h6v6"/></symbol>
+    <symbol id="i-toy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M4.5 9.5c5 1 10 1 15 0M4.5 14.5c5-1 10-1 15 0"/></symbol>
+    <symbol id="i-paw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="10" r="1.8"/><circle cx="10" cy="5.5" r="1.8"/><circle cx="14" cy="5.5" r="1.8"/><circle cx="17.5" cy="10" r="1.8"/><path d="M12 11.5c-3 0-6 3.5-6 6 0 2 2 3 6 1.8 4 1.2 6 .2 6-1.8 0-2.5-3-6-6-6Z"/></symbol>
+    <symbol id="i-edu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5Z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v5"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H4ZM20 5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h6Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h4"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l1-5h14l1 5M4 9v11h16V9M4 9h16M10 20v-5h4v5"/></symbol>
+    <symbol id="i-vet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11" r="2"/></symbol>
+  </defs>
+</svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h12v10H2ZM14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12l1 4v12H5V8Z"/><path d="M5 8h14M9 13h6"/></symbol>
+    <symbol id="i-can" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="7" rx="7" ry="2.5"/><path d="M5 7v10c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V7"/></symbol>
+    <symbol id="i-hay" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c2-6 3-10 3-16M9 20c1-6 2-10 2-16M13 20c0-6 1-10 2-16M18 20c-1-6 0-10 2-16"/><path d="M3 14h18"/></symbol>
+  </defs>
+</svg>
+
+<div class="mock-banner">Maquette interne – contenus, offres et partenaires fictifs, à usage de présentation uniquement</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand" aria-label="Carrefour Animaux, accueil">
+      <img src="assets/logo-carrefour.svg" alt="Carrefour">
+      <span class="brand__sub">Animaux</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="alimentation.html" aria-current="page">Alimentation</a>
+      <a href="index.html#univers">Santé &amp; assurance</a>
+      <a href="index.html#univers">Soins</a>
+      <a href="index.html#univers">Garde</a>
+      <a href="index.html#univers">Équipement</a>
+      <a href="index.html#univers">Nouvel animal</a>
+      <a href="index.html#conseils">Conseils</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> › Alimentation</nav>
+        <span class="eyebrow">Alimentation</span>
+        <h1>Une alimentation adaptée à chaque animal</h1>
+        <p class="lead">Croquettes, pâtées, foin ou graines : trouvez la bonne alimentation pour votre chien, votre chat ou votre nouvel animal de compagnie, en magasin ou livrée chez vous chaque mois.</p>
+        <div class="hero__actions">
+          <a href="#simulateur" class="btn btn--primary">Calculer sa ration</a>
+          <a href="#abonnement" class="btn btn--ghost">Découvrir l'abonnement</a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <svg viewBox="0 0 200 170">
+          <circle cx="100" cy="85" r="78" fill="#eef3fa"/>
+          <path d="M40 92h120a60 60 0 0 1-120 0Z" fill="#1d4f91"/>
+          <g fill="#e30613">
+            <circle cx="72" cy="86" r="7"/><circle cx="90" cy="80" r="7"/><circle cx="108" cy="84" r="7"/><circle cx="126" cy="80" r="7"/><circle cx="82" cy="72" r="6"/><circle cx="116" cy="70" r="6"/><circle cx="99" cy="68" r="6"/>
+          </g>
+          <path d="M84 50c0-8 7-8 7-16M104 50c0-8 7-8 7-16" stroke="#1d4f91" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Nos solutions</span>
+        <h2>Trois façons de bien nourrir votre animal</h2>
+        <p>Des produits Carrefour de qualité et un partenaire spécialisé pour ne jamais tomber en panne de croquettes.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="card">
+          <span class="tag">Produits Carrefour</span>
+          <div class="card__icon"><svg><use href="#i-store"/></svg></div>
+          <h3>La gamme animaux Carrefour</h3>
+          <p>Croquettes, pâtées, friandises et alimentation des nouveaux animaux de compagnie à prix Carrefour, en magasin, en drive ou en livraison.</p>
+          <a href="#produits" class="card__link">Voir la sélection →</a>
+        </div>
+        <div class="card card--featured" id="abonnement">
+          <span class="tag tag--red">Partenaire · Croquetti</span>
+          <div class="card__icon"><svg><use href="#i-truck"/></svg></div>
+          <h3>L'abonnement livré chez vous</h3>
+          <p>La bonne quantité livrée au bon rythme, calculée selon votre animal. Sans engagement, modifiable à tout moment.</p>
+          <a href="#etapes" class="card__link">Comment ça marche →</a>
+        </div>
+        <div class="card">
+          <span class="tag">Partenaire · VetoLink</span>
+          <div class="card__icon"><svg><use href="#i-vet"/></svg></div>
+          <h3>Le bilan nutrition vétérinaire</h3>
+          <p>Surpoids, allergie, animal âgé ? Un vétérinaire vous conseille en téléconsultation de 15 minutes.</p>
+          <a href="#" class="card__link">Prendre rendez-vous →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Simulateur -->
+  <section class="section section--alt" id="simulateur">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Simulateur</span>
+        <h2>Quelle quantité donner à votre animal ?</h2>
+        <p>En quelques clics, estimez sa ration quotidienne, la quantité nécessaire chaque mois et votre budget.</p>
+      </div>
+
+      <div class="simulator">
+        <form class="simulator__form" id="sim-form" onsubmit="return false">
+          <div class="field">
+            <span class="pet-picker__label" style="display:block;margin-bottom:8px;font-size:.93rem">Mon animal</span>
+            <div class="chips" role="group" aria-label="Type d'animal">
+              <button type="button" class="chip" data-pet="chien" aria-pressed="true">🐶 Chien</button>
+              <button type="button" class="chip" data-pet="chat" aria-pressed="false">🐱 Chat</button>
+              <button type="button" class="chip" data-pet="nac" aria-pressed="false">🐰 Nouvel animal de compagnie</button>
+            </div>
+          </div>
+
+          <div class="field" data-for="nac" hidden>
+            <label for="espece">Espèce</label>
+            <select id="espece">
+              <option value="lapin">Lapin</option>
+              <option value="cobaye">Cochon d'Inde</option>
+              <option value="hamster">Hamster, gerbille, souris</option>
+              <option value="oiseau">Oiseau (perruche, canari)</option>
+            </select>
+          </div>
+
+          <div class="field" data-for="chien chat lapin">
+            <label for="poids">Poids (kg)</label>
+            <input type="number" id="poids" min="0.2" max="90" step="0.1" value="15">
+          </div>
+
+          <div class="field" data-for="chien chat">
+            <label for="age">Âge</label>
+            <select id="age">
+              <option value="jeune">Chiot / chaton (moins d'1 an)</option>
+              <option value="adulte" selected>Adulte</option>
+              <option value="senior">Senior (plus de 7 ans)</option>
+            </select>
+          </div>
+
+          <div class="field" data-for="chien chat">
+            <label for="activite">Niveau d'activité</label>
+            <select id="activite">
+              <option value="faible">Faible (appartement, peu de sorties)</option>
+              <option value="normale" selected>Normal</option>
+              <option value="elevee">Élevé (sportif, extérieur)</option>
+            </select>
+          </div>
+
+          <div class="field" data-for="chien chat">
+            <label for="sterilise">Stérilisé</label>
+            <select id="sterilise">
+              <option value="oui">Oui</option>
+              <option value="non" selected>Non</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="simulator__result" aria-live="polite">
+          <span class="eyebrow" style="margin:0">Ration quotidienne estimée</span>
+          <div class="result__big" id="r-ration">–</div>
+          <div>
+            <div class="result__row"><span id="r-energy-label">Besoin énergétique</span><strong id="r-energy">–</strong></div>
+            <div class="result__row"><span>Quantité par mois</span><strong id="r-month">–</strong></div>
+            <div class="result__row"><span>Budget mensuel estimé</span><strong id="r-budget">–</strong></div>
+            <div class="result__row"><span>Cagnotte Carte Carrefour</span><strong id="r-loyalty">–</strong></div>
+          </div>
+          <p id="r-tip" style="margin:0"></p>
+          <a href="#abonnement" class="btn btn--primary" style="align-self:flex-start">Recevoir cette quantité chaque mois</a>
+          <p class="result__note">Estimation indicative basée sur des repères nutritionnels moyens. Elle ne remplace pas l'avis de votre vétérinaire. Suivez aussi les indications de l'emballage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produits -->
+  <section class="section" id="produits">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Sélection</span>
+        <h2 id="produits-title">Nos produits pour votre chien</h2>
+        <p>Une sélection de la gamme animaux Carrefour. Produits et prix donnés à titre d'exemple.</p>
+      </div>
+      <div class="grid grid--4" id="products">
+        <div class="card" data-pet="chien">
+          <div class="product__img"><svg><use href="#i-bag"/></svg></div>
+          <h3>Croquettes chien adulte au poulet, 4 kg</h3>
+          <div class="product__price">12,90 €</div>
+          <div class="product__loyalty">1,29 € crédités sur votre cagnotte</div>
+        </div>
+        <div class="card" data-pet="chien">
+          <div class="product__img"><svg><use href="#i-bag"/></svg></div>
+          <h3>Croquettes chiot grandes races, 3 kg</h3>
+          <div class="product__price">11,50 €</div>
+          <div class="product__loyalty">1,15 € crédités sur votre cagnotte</div>
+        </div>
+        <div class="card" data-pet="chien">
+          <div class="product__img"><svg><use href="#i-can"/></svg></div>
+          <h3>Pâtée chien au bœuf, lot de 6 × 400 g</h3>
+          <div class="product__price">7,20 €</div>
+          <div class="product__loyalty">0,72 € crédités sur votre cagnotte</div>
+        </div>
+        <div class="card" data-pet="chien">
+          <div class="product__img"><svg><use href="#i-bag"/></svg></div>
+          <h3>Croquettes chien senior light, 4 kg</h3>
+          <div class="product__price">13,90 €</div>
+          <div class="product__loyalty">1,39 € crédités sur votre cagnotte</div>
+        </div>
+
+        <div class="card" data-pet="chat" hidden>
+          <div class="product__img"><svg><use href="#i-bag"/></svg></div>
+          <h3>Croquettes chat stérilisé au saumon, 3 kg</h3>
+          <div class="product__price">14,50 €</div>
+          <div class="product__loyalty">1,45 € crédités sur votre cagnotte</div>
+        </div>
+        <div class="card" data-pet="chat" hidden>
+          <div class="product__img"><svg><use href="#i-bag"/></svg></div>
+          <h3>Croquettes chaton, 1,5 kg</h3>
+          <div class="product__price">8,90 €</div>
+          <div class="product__loyalty">0,89 € crédités sur votre cagnotte</div>
+        </div>
+        <div class="card" data-pet="chat" hidden>
+          <div class="product__img"><svg><use href="#i-can"/></svg></div>
+          <h3>Sachets fraîcheur en sauce, 12 × 85 g</h3>
+          <div class="product__price">5,40 €</div>
+          <div class="product__loyalty">0,54 € crédités sur votre cagnotte</div>
+        </div>
+        <div class="card" data-pet="chat" hidden>
+          <div class="product__img"><svg><use href="#i-bag"/></svg></div>
+          <h3>Croquettes chat senior, 2 kg</h3>
+          <div class="product__price">10,90 €</div>
+          <div class="product__loyalty">1,09 € crédités sur votre cagnotte</div>
+        </div>
+
+        <div class="card" data-pet="nac" hidden>
+          <div class="product__img"><svg><use href="#i-hay"/></svg></div>
+          <h3>Foin de prairie, 2 kg</h3>
+          <div class="product__price">5,90 €</div>
+          <div class="product__loyalty">0,59 € crédités sur votre cagnotte</div>
+        </div>
+        <div class="card" data-pet="nac" hidden>
+          <div class="product__img"><svg><use href="#i-bag"/></svg></div>
+          <h3>Granulés lapin adulte, 2,5 kg</h3>
+          <div class="product__price">7,50 €</div>
+          <div class="product__loyalty">0,75 € crédités sur votre cagnotte</div>
+        </div>
+        <div class="card" data-pet="nac" hidden>
+          <div class="product__img"><svg><use href="#i-bag"/></svg></div>
+          <h3>Granulés cochon d'Inde enrichis en vitamine C, 1 kg</h3>
+          <div class="product__price">4,90 €</div>
+          <div class="product__loyalty">0,49 € crédités sur votre cagnotte</div>
+        </div>
+        <div class="card" data-pet="nac" hidden>
+          <div class="product__img"><svg><use href="#i-bag"/></svg></div>
+          <h3>Mélange de graines perruches, 1 kg</h3>
+          <div class="product__price">3,90 €</div>
+          <div class="product__loyalty">0,39 € crédités sur votre cagnotte</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Étapes abonnement -->
+  <section class="section section--alt" id="etapes">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Abonnement avec Croquetti</span>
+        <h2>Ne tombez plus jamais en panne</h2>
+        <p>Notre partenaire Croquetti livre l'alimentation de votre animal au rythme de sa consommation.</p>
+      </div>
+      <div class="grid grid--3 steps">
+        <div class="step">
+          <h3>Je décris mon animal</h3>
+          <p>Espèce, âge, poids, activité : le simulateur calcule la quantité dont il a besoin.</p>
+        </div>
+        <div class="step">
+          <h3>Je choisis mes produits</h3>
+          <p>Parmi la gamme Carrefour ou les marques partenaires, avec la fréquence de livraison proposée.</p>
+        </div>
+        <div class="step">
+          <h3>Je suis livré et récompensé</h3>
+          <p>Livraison offerte dès 49 €, 10 % crédités sur ma Carte Carrefour. Pause ou arrêt en un clic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Questions fréquentes</span>
+        <h2>Tout savoir sur l'alimentation</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Croquettes ou pâtée : que choisir ?</summary>
+          <p>Les croquettes sont pratiques et économiques, la pâtée favorise l'hydratation, en particulier chez le chat. Beaucoup de propriétaires combinent les deux : dans ce cas, réduisez la ration de croquettes en proportion.</p>
+        </details>
+        <details>
+          <summary>Comment changer l'alimentation de mon animal ?</summary>
+          <p>Faites une transition progressive sur 7 jours en mélangeant l'ancienne et la nouvelle alimentation, en augmentant chaque jour la part de la nouvelle.</p>
+        </details>
+        <details>
+          <summary>L'abonnement Croquetti est-il sans engagement ?</summary>
+          <p>Oui. Vous pouvez modifier les produits, décaler une livraison, mettre en pause ou arrêter votre abonnement à tout moment depuis votre espace client.</p>
+        </details>
+        <details>
+          <summary>Mes achats chez Croquetti comptent-ils pour ma Carte Carrefour ?</summary>
+          <p>Oui. Renseignez votre numéro de Carte Carrefour lors de la souscription : 10 % du montant de vos commandes de produits Carrefour sont crédités sur votre cagnotte.</p>
+        </details>
+        <details>
+          <summary>Que donner à un lapin ou à un cochon d'Inde ?</summary>
+          <p>Le foin doit être disponible à volonté : il représente l'essentiel de leur alimentation. Complétez avec des légumes frais et une petite quantité de granulés. Le cochon d'Inde a besoin de vitamine C chaque jour.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container">
+    <div class="cta">
+      <h2>Un doute sur l'alimentation de votre animal ?</h2>
+      <p>Les vétérinaires de notre partenaire VetoLink vous répondent en téléconsultation, 7 jours sur 7.</p>
+      <a href="#" class="btn btn--primary">Parler à un vétérinaire</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <span class="footer__logo"><img src="assets/logo-carrefour.svg" alt="Carrefour"></span>
+        <p>Carrefour Animaux : des solutions sélectionnées pour le bien-être de votre animal.</p>
+      </div>
+      <div>
+        <h4>Nos solutions</h4>
+        <ul>
+          <li><a href="alimentation.html">Alimentation</a></li>
+          <li><a href="index.html#univers">Santé &amp; assurance</a></li>
+          <li><a href="index.html#univers">Soins &amp; hygiène</a></li>
+          <li><a href="index.html#univers">Garde &amp; services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Aller plus loin</h4>
+        <ul>
+          <li><a href="index.html#univers">Équipement</a></li>
+          <li><a href="index.html#univers">Nouvel animal</a></li>
+          <li><a href="index.html#univers">Éducation</a></li>
+          <li><a href="index.html#conseils">Conseils</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Carrefour</h4>
+        <ul>
+          <li><a href="#">Carte Carrefour</a></li>
+          <li><a href="#">Nos magasins</a></li>
+          <li><a href="#">Nous contacter</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">Maquette interne – non destinée à la publication.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
